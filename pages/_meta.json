@@ -1,15 +1,17 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
-  "about": {
-    "title": "About",
+  "methodology": {
+    "title": "Methodologie",
+    "type": "page"
+  },
+  "tech": {
+    "title": "Tech",
     "type": "page"
   },
   "contact": {
-    "title": "Contact ↗",
+    "title": "GitHub ↗",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://github.com/GRINN-dev",
     "newWindow": true
   }
 }
