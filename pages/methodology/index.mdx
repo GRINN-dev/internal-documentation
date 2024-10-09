@@ -1,62 +1,82 @@
-# Processus et methodologie
+# Processus et Méthodologie
 
-Chez Grinn, nous voulons mettre en pratique certains elements de methodologie Agile, sans le vendre reellement a nos clients. C'est un peu un grand ecart mais si l'agilite integrale n'est pas encore a notre portee, nous croyons que certains de ses preceptes peuvent s'appliquer a notre organisation et nous faire gagner en productivite, en qualite de rendu, en respect des exigences client, et en qualite de vie au travail.
+Chez Grinn, nous mettons en œuvre certains principes de la méthodologie Agile sans les commercialiser explicitement à nos clients. Bien que nous ne soyons pas encore prêts pour une approche Agile intégrale, nous croyons fermement que l'adoption de ses pratiques peut améliorer notre productivité, la qualité de nos livrables, le respect des exigences client, et notre qualité de vie au travail.
 
-Mi-2024, nous nous rendons compte que (en vrac)
+## Constat en mi-2024
 
-- nous avons une grosse dizaine de trello minimum de 15 colonnes chacun pour le suivi des en-cours
-- nous avons eu quelques bonnes experiences en prenant mieux le temps de perimetrer les developpements dans un outil adapte, mais nous ne savons pas nous y tenir
-- certains demarre des journees sans savoir quoi faire
-- les contraintes de temps et les enjeux generaux de certains developpements ne sont pas bien partages a l'equipe en charge de la realisation
-- le controle qualite n'est pas encore suffisant
-- les competences ne sont pas encore assez partagees
-- etc...
+Nous avons identifié plusieurs problématiques dans notre organisation, parmi lesquelles :
 
-Tous ces points noirs meritent un traitement Neutrogena, pour s'en debarrasser une bonne fois pour toute. Quelques points dans le desordre (pour l'instant), en partie empruntes a la methode SCRUM, a commencer a mettre en place des le prochain projet:
+- Une dizaine de tableaux Trello pour le suivi des projets, chacun avec un minimum de 15 colonnes, rendant la gestion difficile.
+- Des expériences positives avec la définition rigoureuse des périmètres de développement, mais une difficulté à maintenir cette discipline sur le long terme.
+- Une mauvaise définition des priorités quotidiennes pour certains membres de l'équipe.
+- Une communication insuffisante concernant les contraintes de temps et les objectifs de certains développements.
+- Un contrôle qualité à renforcer pour garantir la conformité des livrables.
+- Un partage insuffisant des compétences et du savoir-faire technique au sein de l'équipe.
 
-- mise en place de sprints systematiques pour les phases projet, d'une duree de deux semaines
-- un chef de projet (en lieu et place d'un PO) pour assurer la relation au client et la traduction et l'affinage de son besoin
-- le chef de projet se charge de l'ecriture des besoins du client en tickets de developpement bien calibres
-- l'equipe prod et notemment le lead dev et l'UX sont en charge de completer en tickets techniques ce qui ne rentre pas dans le competences du chef de projet
-- les projets n'etant pas reellement agiles, le chef de projet est charge d'en faire la liste la plus exhaustive possible des le debut du projet, en soulignant les dependances entre tickets
-- le chef de projet est en charge d'expliquer au client l'etat et le contenu du backlog afin d'etre en mesure de negocier les ajouts posterieurs a la date de demarrage du projet (i.e. on peut changer en cours de route mais pas sans amendements)
-- le chef de projet est responsable de la tenue des rituels scrum suivants
-  - le sprint planning 👉 revue des tickets et estimation de la charge, choix des tickets inclus dans le sprint, prevoir une matinee complete par sprint
-  - la daily standup 👉 15 minutes (grand max) chaque matin pour faire le point sur les avancees et les problemes. Pour l'instant, on essaye de rester ultra concis sur ce format et le faire a l'echelle de grinn
-  - la demo client 👉 a la fin de chaque sprint, le chef de projet presente les avancees au client. Il convient d'abord de faire un test interne. Suite a la demo, deploiement des fonctionnalites en staging pour recette client.
-  - la retrospective 👉 a la fin de chaque sprint, l'equipe se reunit pour faire le point sur le sprint ecoule et proposer des ameliorations pour le suivant. Le chef de projet est responsable de la mise en place des actions correctives
-- chaque membre de l'equipe est responsable de la qualite du projet, chacun doit tester son travail, et le documenter. Le chef de projet y veille mais y contribue aussi.
-- chaque projet est documente, et inclu une serie de procedures de test qui recouvrent l'ensemble des fonctionnalites du projet
-- la pipeline CI/CD se met en place au plus tard au debut du second sprint
+Nous souhaitons traiter ces points en adoptant une approche structurée et inspirée de la méthodologie SCRUM, que nous appliquerons dès notre prochain projet.
 
-## Les outils
+## Méthodologie Agile et SCRUM
 
-Utilisation de Github projects pour le suivi des tickets, et de Discord pour les echanges quotidiens. Interdiction d'utiliser Trello. Interdiction de modifier la structure des tickets sans l'accord du chef de projet.
+### Principes et Pratiques à Mettre en Place
 
-Chaque ticket donne lieu a une PR. Nous utiliserons Gitflow pour la gestion des branches. Chaque PR doit etre revue par un autre membre de l'equipe avant d'etre mergee. La peer review est fortement encouragee. Chaque dev est responsable de merger sa branche une fois la review effectuee et les corrections validees.
+1. **Mise en place de sprints** : Chaque projet sera organisé en sprints de deux semaines, avec des objectifs clairement définis.
+2. **Rôle du chef de projet** :
+   - Responsable de la relation client et de la traduction des besoins en tickets de développement.
+   - Chargé de créer une liste exhaustive de tickets en début de projet, incluant les dépendances.
+   - Autant que possible, les tickets doivent être formulés de manière à être indépendants afin d'éviter les blocages pendant les périodes de review.
+   - Explique l'état et le contenu du backlog au client pour négocier les ajustements ou ajouts en cours de projet.
+3. **Participation de l'équipe technique** :
+   - Les développeurs, en particulier le lead dev et l'UX, sont responsables d'ajouter ou de compléter les tickets techniques.
+   - Les compétences techniques sont partagées régulièrement pour éviter les silos de connaissances. Le CTO est responsable de la formation continue et maintient une base de connaissances partagée.
 
-Les tickets doivent permettre au maximum d'etre traites independamment pour permettre a un dev de continuer a travailler s'il est en attente d'une review. Si un dev a une dependance a une review pour continuer a travailler, il doit le signaler a l'equipe et cette review devient prioritaire.
+### Rituels Scrum
 
-## Les conditions de validation d'un ticket
+- **Sprint planning** : Session d'une matinée pour évaluer et planifier les tâches du sprint à venir.
+- **Daily stand-up** : Réunion quotidienne de 15 minutes pour suivre les progrès et identifier les obstacles.
+- **Démo client** : Tests internes, suivis d'une présentation des réalisations à la fin de chaque sprint et d'un déploiement en staging.
+- **Rétrospective** : Analyse collective du sprint écoulé pour identifier les points d'amélioration.
+- _ajout par rapport au SCRUM_ : **Recette client** : Validation des fonctionnalités par le client en fin de sprint. Le client dispose d'un formulaire pour remonter les anomalies, et d'une interface pour suivre l'avancement des corrections. Lorsque le sprint est validé, le déploiement en production est effectué.
 
-- le ticket doit etre teste par le dev qui l'a developpe
-- le ticket doit etre teste par un autre membre de l'equipe en PR
-- si le ticket ajoute une nouvelle fonctionnalite, il doit etre documente dans le repo du projet et inclu dans les procedures de test du repo
-- si necessaire, la PR du ticket inclu un jeu de donnees pour tester la fonctionnalite
+Les rituels sont plannifiés et considérés comme des tâches à part entière, à ne pas négliger. Sauf en cas d'urgence ou d'impossibilité de trouver un autre arrangement, la présence de tous les membres de l'équipe est obligatoire.
 
-## Blocages sur les tickets
+### Validation des Tickets
 
-En cas de blocage technique sur un ticket, le dev doit le signaler a l'equipe. Si le blocage est lie a une dependance externe, le chef de projet doit etre informe et doit prendre les mesures necessaires pour debloquer la situation.
-Si le blocage est d'ordre technique mais un probleme similaire a deja ete resolu dans un autre projet, le dev doit chercher la solution dans les projets precedents et peut pour ca s'en ouvrir a l'equipe.
+- Chaque ticket doit être testé par le développeur qui l'a développé, puis par un autre membre de l'équipe lors de la revue de la PR. Les peer-reviews sont fortement encouragées. Les développeurs mergent eux-mêmes leurs PR après validation.
+- La documentation des nouvelles fonctionnalités est essentielle et doit être incluse dans les procédures de test.
+- Chaque ticket doit être livré avec un jeu de données de test pour faciliter la validation.
 
-Si le dev n'a pas de piste pour debloquer la situation, il en informe le CTO qui prendra les decisions techniques necessaires et documentera la solution trouvee.
+### Gestion des Demandes Hors-Périmètre Initial
 
-## Utilisation de starters
+- **Communication proactive avec le client** : Le chef de projet doit informer le client dès qu'une demande dépasse le périmètre initial défini et discuter des ajustements nécessaires (délais, coûts).
+- Les demandes hors-périmètre sont évaluées pour déterminer leur priorité et leur impact sur le projet en cours.
 
-Grinn developpe des (pour l'instant 1) template de projet pour accelerer le demarrage des projets. Ces starters sont a utiliser par defaut pour tout nouveau projet. Ils incluent une stack complete et configuree. Au debut de chaque nouveau projet, si des fonctionnalites du projet ne sont pas encore couvertes par les starters mais meritent d'y etre, les premiers tickets du projet sont dedies a l'ajout de ces fonctionnalites dans le starter concerne.
+## Formation Continue et Pair-Programming
 
-Les temps morts en inter-projets sont dedies a l'amelioration des starters. Le CTO est responsable de maintyenir une liste de tickets a traiter pour ameliorer les starters.
+- **Formation continue** : Les développeurs sont encouragés à se former régulièrement sur les nouvelles technologies et pratiques. Des sessions internes de partage de connaissances sont organisées pour favoriser le développement des compétences, a la charge du CTO.
+- **Pair-programming** : Un développeur peut demander l'assistance d'un collègue expérimenté pour résoudre un problème complexe. Le pair-programming est encouragé pour favoriser le partage de connaissances et améliorer la qualité du code.
 
-## Gestion des a-cotes
+## Outils et Organisation
 
-Si du travail survient en dehors du projet, ex: de la TMA sur un autre projet, une demande de devis, un bug critique sur un projet en prod, etc... leur resolution est en priorite a la charge des developpeurs libres. Sinon, on essaye d'anticiper au maximum lors du sprint planning le temps a degager pour la resolution des a-cotes en degageant du temps dans le sprint en cours. (ex: prevoir 4 jours/dev sur une semaine de 5 pour le sprint planning, et 1 jour/dev pour les a-cotes)
+- **Gestion des tickets** : Utilisation de GitHub Projects pour suivre les tickets de développement. Trello est officiellement interdit.
+- **Communication quotidienne** : Utilisation de Discord pour les échanges rapides et les stand-ups.
+- **Gestion des branches et PR** : Utilisation de Gitflow pour structurer les branches de développement. Chaque PR doit être revue par un autre développeur avant d'être fusionnée. Les peer-reviews sont fortement encouragées.
+- **Pipeline CI/CD** : Mise en place d'une intégration continue (CI) et d'un déploiement continu (CD) au plus tard au début du second sprint.
+- **Mesure de la vélocité** : Les tickets sont estimés en points de complexité, et la vélocité de l'équipe est mesurée pour améliorer la précision des estimations. L'estimation des tickets est une tâche collective et se fait par sprint poker.
+- **Mesure du temps passé** : Les développeurs doivent enregistrer le temps passé sur chaque ticket pour améliorer la précision des estimations et identifier les tâches les plus chronophages.
+
+## Blocages et Résolution des Problèmes
+
+- **Signalement des blocages** : Tout blocage technique doit être signalé à l'équipe en daily.
+- **Support technique** : Si le problème est complexe, le CTO intervient pour proposer une solution et documenter la procédure pour les projets futurs.
+- **Recherche de solutions internes** : Les développeurs sont encouragés à explorer les solutions utilisées dans les projets précédents avant d'escalader le problème.
+
+## Utilisation de Starters et Accélération des Projets
+
+- **Starters de projets** : Grinn a développé un starter pour accélérer la mise en place de nouveaux projets. Ce starter inclut une stack complète et configurée.
+- **Completion des starters en début de sprint** : si des fonctionnalites du projet ne sont pas encore couvertes par les starters mais pourraient l'être, les développeurs doivent les ajouter en début de sprint dans le starter, avant de cloner le starter pour le projet.
+- **Améliorations continues des starters** : En cas de temps libre entre les projets, les développeurs doivent se concentrer sur l'amélioration de ces starters. Le CTO maintient une liste de tâches à accomplir pour les faire évoluer.
+
+## Gestion des Tâches Hors-Projet
+
+- **Priorité des tâches hors-projet** : Les tâches telles que la maintenance corrective, les demandes de devis, ou la gestion de bugs critiques sont assignées prioritairement aux développeurs disponibles.
+- **Planification des imprévus** : Lors du sprint planning, un temps est réservé pour gérer ces tâches non prévues, en allouant par exemple 80% du temps aux tâches planifiées et 20% aux imprévus.
